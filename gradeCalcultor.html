@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator</title>
+    <script>
+        function myfun(){
+            
+            function result(){
+            var a = parseInt(document.getElementById("num1").value);
+            var b = parseInt(document.getElementById("num1").value);
+            var c = parseInt(document.getElementById("num1").value);
+            var d = (a + b + c)/3
+             if (d<=70) {
+               document.write("Grade is C"); 
+            } else if(d>=70 && d<=90){
+                document.write("Grade is B"); 
+            }else if(d>=90){
+                document.write("Grade is A"); 
+            }
+        }
+        document.getElementById("result").innerHTML = result();          
+    }
+        
+    </script>
+</head>
+<body>
+    <h4>Maths Marks: <input type="number" value="" id="num1"></h4> <br> 
+    <h4>Physics Marks: <input type="number" value="" id="num2"></h4> <br> 
+    <h4>Chemistry Marks: <input type="number" value="" id="num3"></h4> <br> 
+    <input type="button" value="Grade" onclick="return myfun()">
+    <h4>The Average is:  <span id="result"></span> </h4>
+   
+</body>
+</html>
